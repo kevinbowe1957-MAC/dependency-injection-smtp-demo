@@ -1,41 +1,4 @@
-﻿/*
-Write a simple eMail app that uses Dependency Injection.
-Use the following struct and interface in your solution:
-
-	public struct ParsedName
-	{
-		public string First { get; set; }
-		public string Last { get; set; }
-	}
-
-	public interface INameParser
-	{
-		ParsedName ParseName(string input);
-	}
-*/
-
-/*  
-My Comments:
-
-For the app, I derived two classes from INameParser: 
-	FirstLastParser and LastFirstParser.
-For fun I created a IEmailSender Interface and derived two classes from it: 
-	MyEmailSender and YourEmailSender.
- 
- Starting in Main(), the application will review each element in the name list and 
- initialize the INameParser object with the correct name parser class 
- (FirstNameLast or LastNameFirst).
- 
- Second, the application initializes the IEmailSender object with the
- correct email sender class, based on the number of characters in the last name.
- This is arbitrary.
-
- The proper BuildMessage() method constructs the outgoing message bases on 
- the FirstNameLast or LastNameFirst class.
- The proper SendEmail() method sends the message from Gmail or HotMail.  
-*/
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
